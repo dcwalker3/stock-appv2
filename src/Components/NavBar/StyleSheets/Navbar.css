@@ -1,0 +1,13 @@
+/* Center the user icon in the container and move the user-icon-container to the far right */
+.user-icon-container{
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.user-icon{
+    font-size: x-large;
+    margin-left: .5rem;
+    cursor: pointer;
+    padding: none;
+}
+

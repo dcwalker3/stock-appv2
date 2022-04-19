@@ -1,0 +1,42 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 35rem;
+    min-width: 25rem;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    box-shadow: 8px 10px 5px #a3a3a3;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 2rem;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.form-submit-button {
+    margin-top: .5rem;
+    width: 100%;
+}
+
+.form-message {
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+}
+
