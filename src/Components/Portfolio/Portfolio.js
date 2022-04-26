@@ -1,6 +1,10 @@
 import { React, useEffect, useState } from "react";
 import { useAuth } from "../../firebase/AuthContext";
 
+import ShowPortfolio from "./ShowPortfolio";
+import AddPortfolio from "./AddPortfolio";
+
+import "./StyleSheets/Portfolio.css";
 
 export default function Portfolio(props) {
     const [portfolio, setPortfolio] = useState([]);
@@ -13,7 +17,7 @@ export default function Portfolio(props) {
         
         axios.get('http://localhost:4000/portfolio?email=' + currentUser.email)
             .then(res => {
-                setPortfolio(res.data.data.stockHoldings);
+                setPortfolio(res.data.stockHoldings);
             })
             .catch(err => {
                 console.log(err);
@@ -21,11 +25,11 @@ export default function Portfolio(props) {
     }, [currentUser]);
 
     return (
+        loading ? <h1>Loading...</h1> :
         <div className="portfolio">
-          <h1>Portfolio</h1>
-          <div className="portfolio-container">
-            
-          </div>
+          {
+              portfolio.length > 0 ? (<ShowPortfolio portfolio={portfolio}/>) : <AddPortfolio portfolio={portfolio} user={currentUser}/>
+          }
         </div>
   );
 }
